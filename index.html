@@ -5,37 +5,18 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="pocket.css"/>
-	<title>pocketBook</title>
-  <script type="text/javascript">
-
-  function checkForm(form)
-  {
-    if(document.firstName === '' || #firstName === null) {
-       alert("Error: What's your First Name?");
-       form.fieldname.focus();
-       return false;
-    }
-    if(#lastName === '' || #lastName === null) {
-       alert("Error: What's your lastName?");
-       form.fieldname.focus();
-       return false;
-    }
-    ...
-    return true;
-  }
-
-</script>
+  <title>pocketBook</title>
 </head>
 <body>
  <div class="row">
 <div style="padding-top:17px;">
-	<div style="text-align:center;"><img src="logo.svg"height="40px"width="40px"></div>
+  <div style="text-align:center;"><img src="logo.svg"height="40px"width="40px"></div>
    <div class="col-md-3">.</div>
  <div class="col-xs-6 col-md-4">
-	<hr width="600px"/>
+  <hr width="600px"/>
 
 <div>
-	<p style="padding-top:47px; color :white; font-weight:500; font-size:23px;">Join PocketBook</p>
+  <p style="padding-top:47px; color :white; font-weight:500; font-size:23px;">Join PocketBook</p>
 </div>
 </div>
 </div>
@@ -43,10 +24,10 @@
 <div class="row">
   <div class="col-md-3">.</div>
  <div class="col-xs-6 col-md-4">
-<form onsubmit="return checkForm(this);">
+<form>
   <div class="form-group">
     <label for="firstName" style="color:white;">First Name</label>
-    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" style="width:300px">
+    <input type="text" class="form-control" id="firstName" placeholder="First Name" style="width:300px">
   </div>
 <div class="form-group">
     <label for="lastName"style="color:white;">Last Name</label>
