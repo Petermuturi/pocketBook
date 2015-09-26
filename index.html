@@ -6,6 +6,25 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="pocket.css"/>
 	<title>pocketBook</title>
+  <script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(document.firstName === '' || #firstName === null) {
+       alert("Error: What's your First Name?");
+       form.fieldname.focus();
+       return false;
+    }
+    if(#lastName === '' || #lastName === null) {
+       alert("Error: What's your lastName?");
+       form.fieldname.focus();
+       return false;
+    }
+    ...
+    return true;
+  }
+
+</script>
 </head>
 <body>
  <div class="row">
@@ -24,10 +43,10 @@
 <div class="row">
   <div class="col-md-3">.</div>
  <div class="col-xs-6 col-md-4">
-<form>
+<form onsubmit="return checkForm(this);">
   <div class="form-group">
     <label for="firstName" style="color:white;">First Name</label>
-    <input type="text" class="form-control" id="firstName" placeholder="First Name" style="width:300px">
+    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" style="width:300px">
   </div>
 <div class="form-group">
     <label for="lastName"style="color:white;">Last Name</label>
@@ -42,7 +61,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"style="width:300px">
   </div>
   </form>
-  <li style="list-style:none;padding-bottom:37px;"><a href="#!" style=" text-decoration:none;color:white; font-size:12px; background-color:#27AB3D;padding:4px; padding-left:8px; padding-right:8px;">Create Account</a></li>
+  <li style="list-style:none;padding-bottom:37px;"><a href="thanks.html" style=" text-decoration:none;color:white; font-size:12px; background-color:#27AB3D;padding:4px; padding-left:8px; padding-right:8px;">Create Account</a></li>
   <hr width="600px"/>
   </div>
   </div>
