@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="icon" type="image/svg" href="logo.svg"/>
+ <link rel="icon" type="image/jpg" href="bg.jpg"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="pocket.css"/>
-   <link rel="stylesheet" type="text/css" href="animatecss-master/animate.min.css"/>
+   <link rel="stylesheet" type="text/css" href="animatecss-master/animate.css"/>
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <script src="js/modernizr.custom.js"></script>
   <title>pocketBook</title>
@@ -14,7 +14,7 @@
 <body> 
  <div class="row">
 <div style="padding-top:17px;">
-  <div style="text-align:center;"><img class="animated fadeIn" src="logo.svg"height="40px"width="40px"></div>
+  <div style="text-align:center;"><img src="logo.svg"height="40px"width="40px"></div>
    <div class="col-md-2">.</div>
  <div class="col-xs-6 col-md-4">
   <hr width="900px"/>
@@ -26,7 +26,7 @@
 </div>
 </div>
 <section style="color:white;">
-        <form id="theForm" class="simform" autocomplete="off">
+        <form id="theForm" class="simform" autocomplete="off"action="/cgi-bin/test.cgi" name="theForm" onsubmit="return(validate());">
           <div class="simform-inner">
             <ol class="questions">
               <li>
