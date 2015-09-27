@@ -5,23 +5,76 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="pocket.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
   <title>pocketBook</title>
 </head>
-<body>
+<body> 
  <div class="row">
 <div style="padding-top:17px;">
   <div style="text-align:center;"><img src="logo.svg"height="40px"width="40px"></div>
    <div class="col-md-3">.</div>
  <div class="col-xs-6 col-md-4">
   <hr width="600px"/>
-
+</div>
 <div>
-  <p style="padding-top:47px; color :white; font-weight:500; font-size:23px;">Join PocketBook</p>
+  <p style="padding-top:47px; text-align:center; color :white; font-weight:500; font-size:50px;">PocketBook.</p>
+</div>
+
 </div>
 </div>
-</div>
-</div>
-<div class="row">
+<section style="color:white;">
+        <form id="theForm" class="simform" autocomplete="off">
+          <div class="simform-inner">
+            <ol class="questions">
+              <li>
+                <span><label for="q1">What's your Email?</label></span>
+                <input style="color:white;" placeholder="someone@example.etc" id="q1" name="q1" type="text" />
+              </li>
+              <li>
+                <span><label for="q2">Enter your username.</label></span>
+                <input style="color:white;" placeholder="What should we call you?" id="q2" name="q2" type="text"/>
+              </li>
+              <li>
+                <span><label for="q3">Your Password?</label></span>
+                <input style="color:white;" placeholder="We won't tell;)" id="q3" name="q3" type="password"/>
+              </li>
+              <li>
+                <span><label for="q4">Confirm Password?</label></span>
+                <input style="color:white;" placeholder="Just to make sure you won't forget." id="q4" name="q4" type="password"/>
+              </li>
+              <li>
+                <span><label for="q5">What's your favorite type of books?</label></span>
+                <input style="color:white;" placeholder="Thriller? Romance? Adventurous?... " id="q5" name="q5" type="text"/>
+              </li>
+              <li>
+                <span><label for="q6">How often do you wish to recieve books from us?</label></span>
+                <input style="color:white;" placeholder="Daily? Weekly? Monthly? Yearly?" id="q6" name="q6" type="text"/>
+              </li>
+            </ol><!-- /questions -->
+            <button class="submit" type="submit">Send answers</button>
+            <div style="color:white;" class="controls">
+              <button class="next"></button>
+              <div style="color:white;" class="progress"></div>
+              <span class="number">
+                <span class="number-current"></span>
+                <span class="number-total"></span>
+              </span>
+              <span style="color:white;" class="error-message"></span>
+            </div><!-- / controls -->
+          </div><!-- /simform-inner -->
+          <span style="color:white;" class="final-message"></span>
+        </form><!-- /simform -->      
+      </section>
+      <div class="row">
+      <div class="col-md-3">.</div>
+      <div class="col-xs-6 col-md-4">
+ <hr width="600px"/>
+ </div>
+ </div>
+<!-- <div class="row">
   <div class="col-md-3">.</div>
  <div class="col-xs-6 col-md-4">
 <form>
@@ -45,8 +98,31 @@
   <li style="list-style:none;padding-bottom:37px;"><a href="thanks.html" style=" text-decoration:none;color:white; font-size:12px; background-color:#27AB3D;padding:4px; padding-left:8px; padding-right:8px;">Create Account</a></li>
   <hr width="600px"/>
   </div>
-  </div>
+  </div> -->
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/npm.js"></script>
+<script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script>
+      var theForm = document.getElementById( 'theForm' );
+
+      new stepsForm( theForm, {
+        onSubmit : function( form ) {
+          // hide form
+          classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+          /*
+          form.submit()
+          or
+          AJAX request (maybe show loading indicator while we don't have an answer..)
+          */
+
+          // let's just simulate something...
+          var messageEl = theForm.querySelector( '.final-message' );
+          messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+          classie.addClass( messageEl, 'show' );
+        }
+      } );
+    </script>
 </body>
 </html>
