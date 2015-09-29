@@ -9,20 +9,37 @@
    <link rel="stylesheet" type="text/css" href="animatecss-master/animate.css"/>
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <script src="js/modernizr.custom.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="page/css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="page/css/style.css"> <!-- Resource style -->
+  <script src="page/js/modernizr.js"></script> <!-- Modernizr -->
   <title>pocketBook</title>
-</head>
-<body> 
- <div class="row">
+<body data-hijacking="off" data-animation="opacity">
+  <section class="cd-section visible">
+    <div style="background:none;">
+      <div style="text-align:center;padding-top:30px;"><img src="logo.svg"height="70px"width="70px">
+       <hr width="900px"/>
+    </div>
+    <p style="padding-top:47px; text-align:center; color :white; font-weight:500; font-size:50px;">pocketBook.</p>
+    <p style="text-align:center;padding-top:50px;font-size:30px;font-weight:100;">SUBSCRIBE.READ.ENJOY.</p>
+     <p style="text-align:center;padding-top:30px;font-size:20px;font-weight:100;padding-bottom:40px;">START.NOW.</p>
+ <hr width="900px"/>
+    </div>
+  </section>
+  <section class="cd-section">
+ <div style="background:none;">
+   <div class="row">
 <div style="padding-top:17px;">
   <div style="text-align:center;"><img src="logo.svg"height="40px"width="40px"></div>
-   <div class="col-md-2">.</div>
+   <div class="col-md-2" style="opacity:0;">.</div>
  <div class="col-xs-6 col-md-4">
   <hr width="900px"/>
 </div>
 <div>
   <p style="padding-top:47px; text-align:center; color :white; font-weight:500; font-size:50px;">pocketBook.</p>
 </div>
-
 </div>
 </div>
 <section style="color:white;">
@@ -69,11 +86,19 @@
         </form><!-- /simform -->      
       </section>
       <div class="row">
-      <div class="col-md-2">.</div>
+      <div class="col-md-2"style="opacity:0;">.</div>
       <div class="col-xs-6 col-md-4">
  <hr width="900px"/>
  </div>
  </div>
+ </div>
+ </section>
+ <nav>
+    <ul class="cd-vertical-nav">
+      <li><a href="#0" class="cd-prev inactive">Next</a></li>
+      <li><a href="#0" class="cd-next">Prev</a></li>
+    </ul>
+  </nav> <!-- .cd-vertical-nav -->
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/npm.js"></script>
 <script src="js/classie.js"></script>
@@ -85,19 +110,15 @@
         onSubmit : function( form ) {
           // hide form
           classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-
-          /*
-          form.submit()
-          or
-          AJAX request (maybe show loading indicator while we don't have an answer..)
-          */
-
-          // let's just simulate something...
           var messageEl = theForm.querySelector( '.final-message' );
           messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
           classie.addClass( messageEl, 'show' );
         }
       } );
     </script>
+    <script src="page/js/jquery-2.1.4.js"></script>
+<script src="page/js/velocity.min.js"></script>
+<script src="page/js/velocity.ui.min.js"></script>
+<script src="page/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
